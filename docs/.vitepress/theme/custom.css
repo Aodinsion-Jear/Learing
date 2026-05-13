@@ -1,0 +1,344 @@
+/* Claude 风格主题：暖色调、圆角、柔和、克制 */
+
+:root {
+  /* 主色：Claude 标志性的暖橙 */
+  --vp-c-brand-1: #c96442;
+  --vp-c-brand-2: #b85537;
+  --vp-c-brand-3: #a8492f;
+  --vp-c-brand-soft: rgba(201, 100, 66, 0.14);
+
+  /* 文本 */
+  --vp-c-text-1: #2c2722;
+  --vp-c-text-2: #5a524a;
+  --vp-c-text-3: #8a8078;
+
+  /* 背景：温暖的米色调，类似 Claude.ai */
+  --vp-c-bg: #faf9f7;
+  --vp-c-bg-alt: #f3f1ec;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #f3f1ec;
+
+  /* 边框 */
+  --vp-c-divider: #e8e4dd;
+  --vp-c-gutter: #e8e4dd;
+  --vp-c-border: #e8e4dd;
+
+  /* 字体：使用更接近 Claude 的字体栈 */
+  --vp-font-family-base:
+    'Söhne', 'Inter', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', 'Helvetica Neue', sans-serif;
+
+  --vp-font-family-mono:
+    'JetBrains Mono', 'Söhne Mono', 'SF Mono',
+    Menlo, Monaco, Consolas, 'Courier New', monospace;
+
+  /* 圆角更大一点 */
+  --vp-c-bg-soft-up: #efece6;
+}
+
+.dark {
+  --vp-c-brand-1: #d97757;
+  --vp-c-brand-2: #c96442;
+  --vp-c-brand-3: #b85537;
+  --vp-c-brand-soft: rgba(217, 119, 87, 0.16);
+
+  --vp-c-text-1: #ebe6df;
+  --vp-c-text-2: #b8b0a6;
+  --vp-c-text-3: #847c72;
+
+  --vp-c-bg: #1f1d1a;
+  --vp-c-bg-alt: #262320;
+  --vp-c-bg-elv: #2a2723;
+  --vp-c-bg-soft: #262320;
+
+  --vp-c-divider: #3a342e;
+  --vp-c-gutter: #3a342e;
+  --vp-c-border: #3a342e;
+}
+
+/* 主页 Hero 标题字体调整 */
+.VPHero .name,
+.VPHero .text {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.VPHero .name {
+  background: linear-gradient(135deg, #c96442 0%, #d97757 60%, #e08a6b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.VPHero .tagline {
+  color: var(--vp-c-text-2);
+  font-weight: 400;
+}
+
+/* 主页按钮：圆角更大、更柔和 */
+.VPButton {
+  border-radius: 999px !important;
+  padding: 0 22px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease;
+}
+
+.VPButton.brand {
+  background-color: var(--vp-c-brand-1) !important;
+  border-color: var(--vp-c-brand-1) !important;
+}
+
+.VPButton.brand:hover {
+  background-color: var(--vp-c-brand-2) !important;
+  border-color: var(--vp-c-brand-2) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(201, 100, 66, 0.25);
+}
+
+.VPButton.alt {
+  background-color: var(--vp-c-bg-elv) !important;
+  border: 1px solid var(--vp-c-divider) !important;
+  color: var(--vp-c-text-1) !important;
+}
+
+.VPButton.alt:hover {
+  border-color: var(--vp-c-brand-1) !important;
+  color: var(--vp-c-brand-1) !important;
+}
+
+/* Feature 卡片：柔和卡片样式 */
+.VPFeature {
+  border-radius: 16px !important;
+  background-color: var(--vp-c-bg-elv) !important;
+  border: 1px solid var(--vp-c-divider) !important;
+  transition: all 0.2s ease;
+}
+
+.VPFeature:hover {
+  transform: translateY(-2px);
+  border-color: var(--vp-c-brand-1) !important;
+  box-shadow: 0 10px 30px rgba(60, 50, 40, 0.06);
+}
+
+.VPFeature .title {
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+.VPFeature .details {
+  color: var(--vp-c-text-2);
+  line-height: 1.65;
+}
+
+/* 顶部导航栏：更轻盈 */
+.VPNav {
+  backdrop-filter: saturate(150%) blur(12px);
+  -webkit-backdrop-filter: saturate(150%) blur(12px);
+}
+
+.VPNavBar {
+  background-color: rgba(250, 249, 247, 0.7) !important;
+  border-bottom: 1px solid var(--vp-c-divider) !important;
+}
+
+.dark .VPNavBar {
+  background-color: rgba(31, 29, 26, 0.75) !important;
+}
+
+.VPNavBar .title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.VPNavBarMenuLink {
+  font-weight: 500;
+  color: var(--vp-c-text-2) !important;
+  transition: color 0.15s ease;
+}
+
+.VPNavBarMenuLink:hover,
+.VPNavBarMenuLink.active {
+  color: var(--vp-c-brand-1) !important;
+}
+
+/* 左侧侧边栏 */
+.VPSidebar {
+  background-color: var(--vp-c-bg) !important;
+  border-right: 1px solid var(--vp-c-divider) !important;
+}
+
+.VPSidebarItem .text {
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+}
+
+.VPSidebarItem.is-active > .item .link .text {
+  color: var(--vp-c-brand-1) !important;
+  font-weight: 600;
+}
+
+.VPSidebarItem .link:hover .text {
+  color: var(--vp-c-brand-1) !important;
+}
+
+/* 文章内容区：更舒适的阅读体验 */
+.VPDoc {
+  padding-top: 32px !important;
+}
+
+.vp-doc {
+  max-width: 760px;
+}
+
+.vp-doc h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.vp-doc h2 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  border-top: none !important;
+  padding-top: 32px !important;
+  margin-top: 40px !important;
+  font-size: 24px;
+}
+
+.vp-doc h3 {
+  font-weight: 600;
+  font-size: 19px;
+}
+
+.vp-doc p,
+.vp-doc li {
+  line-height: 1.78;
+  color: var(--vp-c-text-1);
+}
+
+/* 行内代码：暖色背景 */
+.vp-doc :not(pre) > code {
+  background-color: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  border-radius: 6px;
+  padding: 2px 7px;
+  font-size: 0.88em;
+  font-weight: 500;
+  border: none;
+}
+
+/* 代码块：浅色背景 */
+.vp-doc div[class*='language-'] {
+  border-radius: 12px;
+  background-color: #f5f2ec !important;
+  border: 1px solid var(--vp-c-divider);
+  box-shadow: 0 2px 10px rgba(60, 50, 40, 0.04);
+}
+
+.dark .vp-doc div[class*='language-'] {
+  background-color: #2a2723 !important;
+}
+
+.vp-doc div[class*='language-'] code {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #2c2722;
+}
+
+.dark .vp-doc div[class*='language-'] code {
+  color: #ebe6df;
+}
+
+/* 浅色模式下代码语法高亮颜色 */
+.vp-doc div[class*='language-'] .shiki span {
+  color: var(--shiki-light, inherit) !important;
+}
+
+.dark .vp-doc div[class*='language-'] .shiki span {
+  color: var(--shiki-dark, inherit) !important;
+}
+
+/* 代码块右上角语言标签 */
+.vp-doc div[class*='language-']::before {
+  color: var(--vp-c-text-3) !important;
+}
+
+/* 代码块复制按钮 */
+.vp-doc div[class*='language-'] > button.copy {
+  background-color: var(--vp-c-bg-elv) !important;
+  border: 1px solid var(--vp-c-divider) !important;
+}
+
+/* 引用块：左侧暖色竖线 */
+.vp-doc blockquote {
+  background-color: var(--vp-c-bg-soft);
+  border-left: 3px solid var(--vp-c-brand-1);
+  border-radius: 0 10px 10px 0;
+  padding: 14px 20px;
+  color: var(--vp-c-text-2);
+}
+
+.vp-doc blockquote > p {
+  margin: 0;
+}
+
+/* 链接：暖色 + 下划线 */
+.vp-doc a {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  border-bottom: 1px solid var(--vp-c-brand-soft);
+  transition: border-color 0.15s ease;
+}
+
+.vp-doc a:hover {
+  border-bottom-color: var(--vp-c-brand-1);
+}
+
+/* 表格 */
+.vp-doc table {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc th {
+  background-color: var(--vp-c-bg-soft);
+  font-weight: 600;
+}
+
+/* 文章底部上一篇/下一篇 */
+.VPDocFooter .pager-link {
+  border-radius: 12px !important;
+  border: 1px solid var(--vp-c-divider) !important;
+  transition: all 0.2s ease;
+}
+
+.VPDocFooter .pager-link:hover {
+  border-color: var(--vp-c-brand-1) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(201, 100, 66, 0.08);
+}
+
+/* 滚动条：低调一点 */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--vp-c-divider);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--vp-c-text-3);
+}
+
+/* 选中文字颜色 */
+::selection {
+  background-color: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+}
