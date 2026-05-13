@@ -2,6 +2,9 @@ export default {
   title: 'Java 学习博客',
   description: '记录 JavaSE 学习心得、知识总结和练习复盘',
   base: '/Learing/',
+  head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/Learing/favicon.svg' }]
+  ],
   markdown: {
     theme: {
       light: 'github-light',
