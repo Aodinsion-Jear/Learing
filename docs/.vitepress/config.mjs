@@ -12,7 +12,8 @@ export default {
     nav: [
       { text: '首页', link: '/' },
       { text: 'JavaSE 笔记', link: '/javase/' },
-      { text: '学习心得', link: '/thoughts/' }
+      { text: '学习感悟', link: '/thoughts/' },
+      { text: '代码片段', link: '/snippets/' }
     ],
     sidebar: {
       '/javase/': [
@@ -28,11 +29,21 @@ export default {
       ],
       '/thoughts/': [
         {
-          text: '学习心得',
+          text: '学习感悟',
           items: [
             { text: '目录', link: '/thoughts/' },
             { text: '第一次理解面向对象', link: '/thoughts/first-oop' },
             { text: '学习集合时的心得', link: '/thoughts/collections-review' }
+          ]
+        }
+      ],
+      '/snippets/': [
+        {
+          text: '代码片段',
+          items: [
+            { text: '目录', link: '/snippets/' },
+            { text: 'Hello World', link: '/snippets/hello-world' },
+            { text: '输入输出', link: '/snippets/input-output' }
           ]
         }
       ]

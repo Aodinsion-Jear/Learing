@@ -16,9 +16,14 @@ hero:
 features:
   - title: JavaSE 笔记
     details: 按主题整理 Java 基础、面向对象、集合、多线程等内容。
+    link: /javase/
+    linkText: 进入笔记
   - title: 学习感悟
     details: 记录学习中真正想明白的点、踩过的坑和复盘总结。
+    link: /thoughts/
+    linkText: 进入感悟
   - title: 代码片段
     details: 用 Markdown 保存常见语法、示例代码和练习答案。
+    link: /snippets/
+    linkText: 查看片段
 ---
-
