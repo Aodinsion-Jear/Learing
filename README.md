@@ -182,7 +182,7 @@ docs/thoughts/java-methods.md
 
 ```powershell
 git add .
-git commit -m "新增笔记：Java 异常处理"
+git commit -m "新增感悟：一些话"
 git push
 ```
 
