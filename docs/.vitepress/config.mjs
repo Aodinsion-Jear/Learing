@@ -35,6 +35,7 @@ export default {
           text: '学习感悟',
           items: [
             { text: '目录', link: '/thoughts/' },
+            { text: '一些话', link: '/thoughts/thougts_first' },
             { text: '第一次理解面向对象', link: '/thoughts/first-oop' },
             { text: '学习集合时的心得', link: '/thoughts/collections-review' }
           ]
