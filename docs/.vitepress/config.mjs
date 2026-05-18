@@ -16,7 +16,8 @@ export default {
       { text: '首页', link: '/' },
       { text: 'JavaSE 笔记', link: '/javase/' },
       { text: '学习感悟', link: '/thoughts/' },
-      { text: '代码片段', link: '/snippets/' }
+      { text: '代码片段', link: '/snippets/' },
+      { text: '日记', link: '/diary/' }
     ],
     sidebar: {
       '/javase/': [
@@ -48,6 +49,14 @@ export default {
             { text: '目录', link: '/snippets/' },
             { text: 'Hello World', link: '/snippets/hello-world' },
             { text: '输入输出', link: '/snippets/input-output' }
+          ]
+        }
+      ],
+      '/diary/': [
+        {
+          text: '日记',
+          items: [
+            { text: '目录', link: '/diary/' }
           ]
         }
       ]

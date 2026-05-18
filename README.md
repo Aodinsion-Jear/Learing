@@ -1,6 +1,6 @@
 # Java 学习博客
 
-一个用 **VitePress** 搭建的个人 Java 学习博客，用来记录学习笔记和学习感悟。
+一个用 **VitePress** 搭建的个人 Java 学习博客，用来记录学习笔记、学习感悟、代码片段和日记。
 
 在线访问：https://aodinsion-jear.github.io/Learing/
 
@@ -20,14 +20,22 @@ docs/
 │  ├─ index.md          感悟目录
 │  ├─ first-oop.md
 │  └─ collections-review.md
+├─ snippets/            代码片段
+│  ├─ index.md          片段目录
+│  ├─ hello-world.md
+│  └─ input-output.md
+├─ diary/               日记
+│  └─ index.md          日记目录
 └─ .vitepress/
    └─ config.mjs        网站配置（导航 + 侧边栏）
 ```
 
-记住两个核心目录：
+记住四个内容目录：
 
 - **`docs/javase/`** → 放学习笔记
 - **`docs/thoughts/`** → 放学习感悟
+- **`docs/snippets/`** → 放代码片段
+- **`docs/diary/`** → 放日记
 
 ---
 
@@ -176,13 +184,60 @@ docs/thoughts/java-methods.md
 
 ---
 
+## 新增一篇日记
+
+以新增 “今天开始坚持写日记” 为例。
+
+### 第一步：新建文件
+
+```text
+docs/diary/start-diary.md
+```
+
+### 第二步：写内容
+
+```md
+# 今天开始坚持写日记
+
+## 今天做了什么
+
+- 复习了 Java 基础
+- 整理了博客分区
+- 记录了今天的学习状态
+
+## 今天的心情
+
+今天把博客结构整理清楚了，之后可以更方便地记录日常。
+
+## 明天想做什么
+
+- 继续补充 JavaSE 笔记
+- 写一篇新的学习感悟
+```
+
+### 第三步：加进日记目录和侧边栏
+
+先打开 `docs/diary/index.md`，在文章列表里加入：
+
+```md
+- [今天开始坚持写日记](./start-diary.md)
+```
+
+再打开 `docs/.vitepress/config.mjs`，找到 `/diary/` 这一段，在 `items` 里加入：
+
+```js
+{ text: '今天开始坚持写日记', link: '/diary/start-diary' }
+```
+
+---
+
 ## 推送到线上（GitHub Pages 自动部署）
 
 写完新文章后，在 PowerShell 执行：
 
 ```powershell
 git add .
-git commit -m "新增感悟：一些话"
+git commit -m "更新感悟目录"
 git push
 ```
 
@@ -234,11 +289,11 @@ System.out.println("Hello Java");
 ```text
 # 标题
 
-## 今天学了什么 / 今天的感悟
-## 我的理解
+## 今天学了什么 / 今天的感悟 / 今天做了什么
+## 我的理解 / 今天的心情
 ## 示例代码（笔记类必写）
 ## 容易混淆的地方
-## 今日问题
+## 今日问题 / 明天想做什么
 ```
 
 好处：
@@ -263,6 +318,6 @@ System.out.println("Hello Java");
 
 ## 三句话流程总结
 
-1. 在 `docs/javase/` 或 `docs/thoughts/` 新建 `.md` 文件，写内容
+1. 在 `docs/javase/`、`docs/thoughts/`、`docs/snippets/` 或 `docs/diary/` 新建 `.md` 文件，写内容
 2. 在 `docs/.vitepress/config.mjs` 的对应侧边栏里加一行
 3. `git add . && git commit -m "..." && git push`

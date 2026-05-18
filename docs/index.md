@@ -26,4 +26,8 @@ features:
     details: 用 Markdown 保存常见语法、示例代码和练习答案。
     link: /snippets/
     linkText: 查看片段
+  - title: 日记
+    details: 记录每天的学习进度、生活片段和阶段小结。
+    link: /diary/
+    linkText: 查看日记
 ---
